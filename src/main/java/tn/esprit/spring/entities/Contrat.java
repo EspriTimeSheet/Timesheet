@@ -46,10 +46,11 @@ public class Contrat implements Serializable {
 		super();
 	}
 	
-	public Contrat(Date dateDebut, String typeContrat, float salaire) {
+	public Contrat(Date dateDebut,  float salaire, String typeContrat) {
 		this.dateDebut = dateDebut;
-		this.typeContrat = typeContrat;
 		this.salaire = salaire;
+		this.typeContrat = typeContrat;
+		
 	}
 
 
@@ -91,6 +92,15 @@ public class Contrat implements Serializable {
 
 	public void setEmploye(Employe employe) {
 		this.employe = employe;
+	}
+
+	public Contrat( Date dateDebut, String typeContrat, float telephone, Employe employe, float salaire) {
+		super();
+		this.dateDebut = dateDebut;
+		this.typeContrat = typeContrat;
+		this.telephone = telephone;
+		this.employe = employe;
+		this.salaire = salaire;
 	}
 	
 	
