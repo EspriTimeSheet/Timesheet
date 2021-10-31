@@ -11,7 +11,7 @@
 	<groupId>tn.esprit.spring</groupId>
 	<artifactId>timesheet-ci</artifactId>
 	<version>1.0</version>
-	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
 	<name>timesheet-ci</name>
 	<description>timesheet-ci</description>
 
