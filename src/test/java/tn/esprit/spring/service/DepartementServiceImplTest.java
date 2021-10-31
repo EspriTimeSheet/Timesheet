@@ -41,6 +41,7 @@ public class DepartementServiceImplTest {
 		l.info("retrieveDep : " + dep);
 	}
 
+	
 	@Test
 	public void testAddDepartement() throws ParseException {
 		Departement dep = new Departement("Formation");
