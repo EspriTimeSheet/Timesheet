@@ -56,11 +56,6 @@ public class User implements Serializable {
 		this.role = role;
 	}
 
-
-	public User(int i, String string, String string2, Date d, Role chefDepartement) {
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", dateNaissance="

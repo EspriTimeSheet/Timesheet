@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import tn.esprit.spring.services.*;
+
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.services.IDepartementService;
 
@@ -24,8 +24,6 @@ public class DepartementServiceImplTest {
 
 	private static final Logger l = (Logger) LogManager.getLogger(DepartementServiceImplTest.class);
 	
-	@Autowired
-	IEntrepriseService entrpriseService;
 	
 	@Autowired
 	IDepartementService depService;
@@ -67,8 +65,16 @@ public class DepartementServiceImplTest {
 		Assert.assertNull(depService.retrieveDepartement(3));
 		l.info(" Departement supprimée avec succès");
 		}
-
 	
+	
+/*	@Test
+	public void testDeleteDep()  {
+		depService.deleteDep("3");
+		Assert.assertNull(depService.departementRetrieved("3"));
+		l.info(" Departement supprimée avec succès");
+		}
+
+	*/
 	 // 5 tests unitaires
 	 
 }
