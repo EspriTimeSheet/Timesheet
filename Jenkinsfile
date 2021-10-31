@@ -11,13 +11,39 @@ pipeline {
         
             }
         }
-            
-        stage("Build") {
+            stage("Maven version") {
             steps {
-                bat "mvn -version"
-                bat "mvn clean install -DskipTests"
+                  bat "mvn -version"
+                  }
+        }
+        
+        stage("delete target ") {
+            steps {      
+                bat "mvn clean"
+                  }
+        }
+
+        stage("Test") {
+            steps {
+                script {
+                    bat "mvn test"
+                }
             }
         }
+        
+        stage("Build") {
+            steps {
+                bat "mvn package -DskipTests=true"
+            }
+        }
+        
+          stage("tests unitaires ") {
+            steps {
+                bat "mvn test"
+                  }
+        }
+        
+        
         
         stage("Sonar") {
             steps {
@@ -26,10 +52,7 @@ pipeline {
         }
        
        
-        stage("Nexus") {
-            steps {           
-                    bat "mvn deploy"
-                }         
-        }
-   
-}
+        
+
+
+ 
